@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dia</title>
+</head>
+<body>
+  <input type="number" id="dia" placeholder="Dia">
+  <input type="number" id="mes" placeholder="Mes">
+  <input type="number" id="anio" placeholder="Año">
+  <br><br>
+  <input type="button" value="Click para saber que dia naciste" id="boton">
+  <p class="mensaje"></p>
+
+  <script>
+    var dia = document.querySelector("input#dia")
+    var mes = document.querySelector("input#mes")
+    var anio = document.querySelector("input#anio")
+    var boton = document.querySelector("input#boton")
+
+    boton.addEventListener("click", function(evento) {
+      var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto",
+      "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+      var dias = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
+
+      var valorDia = parseInt(dia.value);
+      var valorMes = parseInt(mes.value);
+      var valorAnio = parseInt(anio.value);
+      var fechadeNacimiento = new Date(valorAnio, valorMes, valorDia);
+
+      var resultadoDia = dias[fechadeNacimiento.getDay()];
+      var resultadoMes = meses[fechadeNacimiento.getMonth()];
+      
+      document.querySelector(".mensaje").innerHTML = "Naciste el " + resultadoDia + " " + valorDia + " de " + resultadoMes + " del año " + valorAnio;
+    })
+  </script>
+</body>
+</html>

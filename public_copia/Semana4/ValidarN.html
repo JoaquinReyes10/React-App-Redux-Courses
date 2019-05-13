@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body{
+      font-family: Verdana;
+      background-color: purple;
+      color: white;
+    }
+  </style>
+  <script>
+    function validar(){
+      var x;
+      x = document.getElementById("numero").value;
+      if(isNaN(x.value)){
+          document.getElementById("mensaje").innerHTML = "Es un número";
+          if(x > 0 && x < 11){
+            document.getElementById("mensaje").innerHTML += " y si entra en el rango requerido";
+          }
+          else {
+            document.getElementById("mensaje").innerHTML += " y no entra en el rango requerido";
+          }
+      }
+      else{
+          document.getElementById("mensaje").innerHTML = "No es un número";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Validar números</h1>
+  <p>Por favor introduce un número del 1 al 10</p>
+    <input type="text" id="numero">
+    <button style="background-color: powderblue" onclick="validar()">Validar</button>
+    <p id="mensaje"></p>
+</body>
+</html>

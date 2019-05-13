@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculadora</title>
+  <style>
+    body{
+      color: rgb(128, 159, 219);
+      background: black;
+      font-family: Verdana;
+    }
+    input{
+      color: white;
+      background: black;
+      border: 1px solid rgb(128, 159, 219);
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculadora</h1>
+  Introduce un número:
+  <input type="number" id="input"><br><br>
+  Introduce el Porcentaje.
+  Solo utilizar si vas a pulsar el boton "Porcentaje"
+  <input type="number" id="input2"><br><br>
+  <input type="button" value="Al cuadrado" onclick="Cuadrado()"><br><br>
+  <input type="button" value="Entre dos" onclick="Entre()"><br><br>
+  <input type="button" value="Porcentaje" onclick="Porcentaje()"><br><br>
+  <input type="button" value="Área del circulo" onclick="Circulo()">
+
+  <script>
+    function Cuadrado(){
+      var num = document.getElementById("input").value;
+      var y = num * num;
+      alert(num + " al cuadrado es: " + y);
+    }
+
+    function Entre(){
+      var num = document.getElementById("input").value;
+      var x = num / 2;
+      alert(num + " entre 2 es: " + x);
+    }
+
+    function Porcentaje(){
+      var num = document.getElementById("input").value;
+      var num2 = document.getElementById("input2").value;
+      var z = num2 / 100;
+      alert((num * z) + " es el " + num2 + "% de " + num);
+    }
+
+    function Circulo(){
+      var num = document.getElementById("input").value;
+      var c = 3.1416 * (num * num);
+      alert("El área del circulo es: " + c);
+    }
+  </script>
+</body>
+</html>

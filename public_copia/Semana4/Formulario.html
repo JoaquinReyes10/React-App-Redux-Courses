@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://lh3.googleusercontent.com/xDyn-Xh22NdPD-BJ4t9hWjtW1M0vHQO1gZTFblZL__euUlNjfeULxgCj3jEMpm5T3A" sizes="16x16">
+  <title>Formulario - Banorte</title>
+  <style>
+    form{
+      font-family: Verdana;
+      color: black;
+      margin-left: 38%;
+    }
+    input, textarea, select{
+      background-color: #DF013A;
+      color: white;
+      font-size: 15px;
+      font-family: Verdana;
+      border: 2px solid black;
+    }
+    img{
+      height: 100px;
+      width: 500px;
+      padding-bottom: 20px;
+      margin-top: 2%;
+      margin-left: 28%;
+    }
+    div  {
+      background-image: url("tarj.png");
+      background-repeat: no-repeat;
+      margin-left: -60%;
+    }
+  </style>
+</head>
+<body bgcolor="white">
+  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ad/Banorte_logo.svg/1280px-Banorte_logo.svg.png" alt="Banorte">
+
+  <form id="formulario">
+    Nombre:
+    <input type="text" id="nombre"><br><br>
+    Edad:
+    <input type="number" id="edad"><br><br>
+    Mensaje: <br>
+    <textarea rows="10" cols="30" id="mensaje"></textarea><br>
+    Género:  <br>
+    <input type="radio" value="Hombre" name="genero"> Hombre
+    <input type="radio" value="Mujer" name="genero"> Mujer
+    <input type="radio" value="Indefinido" name="genero"> Indefinido
+    <br><br>
+    Profesión:
+    <select id="profesion">
+      <option value="Vacio">Selecciona una profesion</option>
+      <option value="Empleado">Empleado</option>
+      <option value="Avenger">Avenger</option>
+      <option value="Programador">Programador</option>
+      <option value="Enfermera">Enfermera</option>
+      <option value="Albañil">Albañil</option>
+    </select>
+    <br><br>
+    Estas casad@? <br>
+    <input type="checkbox" name="casad"> Si
+    <input type="checkbox" name="casad"> Nel<br><br>
+    Credito a pedir:
+    <input type="range" id="credito" min="0" max="1000" value="0"><br><br>
+    <input type="submit" id="enviar">
+    <div>
+      <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </pre>
+    </div>
+  </form>
+
+  <script>
+  var form = document.querySelector("#formulario")
+    form.addEventListener("submit", function(){
+      var nombre = document.querySelector("#nombre").value;
+      var edad = document.querySelector("#edad").value;
+      var mensaje = document.querySelector("#mensaje").value;
+      var profesion = document.querySelector("#profesion").value;
+      var credito = document.querySelector("#credito").value;
+
+      if(nombre == "" || edad == "" || mensaje == ""){
+        alert("Tienes campos vacios");
+      }
+      else if(!(document.querySelector("input[name='genero']:checked"))){
+        alert("Selecciona un genero");
+      }
+      else if(profesion == "Vacio"){
+        alert("Selecciona una profesion");
+      }
+      else if(!(document.querySelector("input[name='casad']:checked"))){
+        alert("Selecciona si estas casado o no");
+      }
+      else if(credito == 0){
+        alert("Elige un rango de Credito");
+      }
+      else{
+        alert("Bien, formulario completado");
+      }
+    })
+  </script>
+</body>
+</html>

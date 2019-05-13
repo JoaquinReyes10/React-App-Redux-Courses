@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      {{ contador }} <br><br>
+      <button type="button" @click="sumar()">Aumentar en 1</button>
+      <button type="button" @click="sumar2()">Aumentar en 5</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          contador: 0,
+        },
+        methods: {
+          sumar: function() {
+            this.contador++
+          },
+          sumar2: function() {
+            this.contador+= 5
+            }
+          }
+      })
+    </script>
+  </body>
+</html>

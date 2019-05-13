@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title></title>
+  <style>
+    body{
+      font-family: Verdana;
+      color: red;
+    }
+    li{
+      list-style-type: none;
+      padding: 15px;
+      text-align: center;
+      border: 2px solid black;
+      width: 30%;
+    }
+    b{
+      color: #084B8A;
+    }
+    .active:hover{
+      background-color: #04B404;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-xs-6 col-sm-12">
+        <div id="app">
+            <ul>
+              <li v-for="item in listaObjetos" v-on:click="elegir" v-model="p" class="active">
+                <b>Producto: </b>{{ item.nombre }} <b>Precio:</b> ${{ item.precio }}</li>
+            </ul>
+            <p v-model="resul"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        active: 1,
+        listaObjetos: [
+        {
+          nombre: "Pelota",
+          precio: "50",
+        }, {
+          nombre: "Lata de atún",
+          precio: "35",
+        }, {
+          nombre: "Pinzas",
+          precio: "100",
+        }, {
+          nombre: "Llanta",
+          precio: "10",
+        }, {
+          nombre: "Computadora",
+          precio: "95",
+        }
+        ]
+      },
+    methods: {
+      elegir: function() {
+        var x = {
+          p: this.p,
+        }
+        this.p.classList.add("active")
+      }
+    }
+     })
+  </script>
+</body>
+</html>

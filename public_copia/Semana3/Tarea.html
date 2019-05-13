@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title id="titulo">Tarea</title>
+  <style>
+  #div1{
+    height:250px;
+    width:250px;
+    background-color: black;
+  }
+  </style>
+</head>
+<body>
+  <div>
+  <form>
+  <input type="text" id="valor">
+  <input type="button" value="Enviar" onclick="Cambiar()">
+  <p id="parrafo" onchange="Cambiar()"></p>
+  </form>
+  </div>
+  <div>
+  <select id="Seleccionar" onchange="Color()">
+  <option>Negro 
+  <option value="Azul">Azul
+  <option value="Verde">Verde
+  <option value="Rojo">Rojo
+  <option value="Amarillo">Amarillo
+</select>
+</div>
+<p id="demo"></p>
+<div id="div1" onmouseover="div()" onmouseout="div2()" onchange="Color()"></div>
+<p>Escribe algo en la caja de texto y pasa el mouse sobre el Div y mira lo que sucede con el Titulo.</p>
+  <script>
+    function Cambiar(){
+      var texto = document.getElementById("valor").value;
+      document.getElementById("parrafo").innerHTML = texto;
+    }
+    function div(){
+      var x = document.getElementById("valor").value;
+      if(x == ""){
+        x = "Tarea";
+      }
+      document.getElementById("titulo").innerHTML = x;
+    }
+    function div2(){
+      document.getElementById("titulo").innerHTML = "Tarea";
+    }
+    function Color(){
+      var y = document.getElementById("Seleccionar").value;
+      document.getElementById("demo").innerHTML = "Seleccionaste: " + y;
+      switch (y) {
+        case "Azul":
+        document.getElementById("div1").style.backgroundColor = "blue";
+          break;
+          case "Rojo":
+          document.getElementById("div1").style.backgroundColor = "red";
+            break;
+            case "Verde":
+            document.getElementById("div1").style.backgroundColor = "green";
+              break;
+              case "Amarillo":
+              document.getElementById("div1").style.backgroundColor = "yellow";
+                break;
+        default:
+        document.getElementById("div1").style.backgroundColor = "black";
+      }
+    }
+  </script>
+</body>
+</html>

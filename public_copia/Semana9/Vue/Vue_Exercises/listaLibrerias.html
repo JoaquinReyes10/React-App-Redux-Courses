@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+        <form @submit.prevent="añadir">
+      Añade mas librerias <input type="text" v-model="item" id="item">
+      <button type="button" v-on:click="añ<adir></adir>">Añadir</button>
+    </form>
+      <ul>
+          <li v-for="(item) in librerias">Libreria: {{ item }}</li>
+      </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          librerias: [
+          "JQuery.js", "React.js",
+          "Angular.js", "Vue.js",
+          "Bootstrap.js", "Meteor.js",
+          "Foundation.js", "BackBone.js",
+          "Moment.js", "Modernizr.js",
+     ]
+        },
+        methods: {
+          añadir: function() {
+            var listar = {
+              item: this.item,
+            }
+            this.librerias.push(listar)
+          },
+      }
+      })
+    </script>
+  </body>
+</html>

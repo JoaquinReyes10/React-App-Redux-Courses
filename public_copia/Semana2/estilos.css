@@ -1,0 +1,13 @@
+#Esqueleto {
+  height: 150px;
+  width: 120px;
+}
+a{
+  text-decoration: none;
+  color: rgb(255, 0, 0);
+}
+.lol{
+  text-align: right;
+  font-size: 15px;
+  color: yellow;
+}

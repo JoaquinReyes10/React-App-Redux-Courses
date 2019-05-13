@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Diferencia</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <style>
+      body{
+        background-color: brown;
+      }
+      #hide-me{
+        background-color: grey;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="hide-me">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBj65jgHna4DpcLJGuLEothMhHQe4znSLtN5eldmYqA2CdrBFZ" alt="img">
+    </div>
+    <button id="displayNone">display: none</button>
+    <button id="visibilityHidden">visibility: hidden</button>
+
+
+     <script src="./js/jquery-3.3.1.min.js"></script>
+    <script>
+            $('#displayNone').click(function(e) {
+
+        // Resetear, por si acaso has estado jugando con la otra propiedad
+        $('#hide-me').css('visibility', 'visible');
+
+        if( $('#hide-me').is(":visible") ) {
+          $('#hide-me').css('display', 'none');
+        } else {
+          $('#hide-me').css('display', 'block');
+        }
+      });
+
+      $('#visibilityHidden').click(function(e) {
+
+        // Resetear, por si acaso has estado jugando con la otra propiedad
+        $('#hide-me').css('display', 'block');
+
+        if( $('#hide-me').css('visibility') != 'hidden' ) {
+          $('#hide-me').css('visibility', 'hidden');
+        } else {
+          $('#hide-me').css('visibility', 'visible');
+        }
+      });
+    </script>
+
+    	<script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>

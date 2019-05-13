@@ -1,0 +1,19 @@
+table, tr, td, th{
+  border: 2px solid black;
+  font-family: Verdana;
+  border-collapse: collapse;
+  padding: 10px;
+}
+tr:hover{
+  background-color: gold;
+}
+td:hover{
+  color: white;
+  background-color: black;
+}
+table{
+  background-color: DeepSkyBlue;
+}
+th:hover{
+  background-color: red;
+}

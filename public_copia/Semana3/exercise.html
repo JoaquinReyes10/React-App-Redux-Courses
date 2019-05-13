@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta description="Descripción">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p id="raphael"></p>
+  <p></p>
+  <p class="donatello"></p>
+  <p class="leonardo"></p>
+  <p id="michelangelo"></p>
+  <script>
+    document.getElementById("raphael").innerHTML = "Good Job!";
+    document.getElementsByTagName("p")[1].innerHTML = "Good Job!";
+    document.getElementsByClassName("donatello")[0].innerHTML = "Good Job!";
+    document.querySelectorAll("p.leonardo")[0].innerHTML = "Good Job!";
+    document.getElementById("michelangelo").innerHTML = "Good Job!";
+
+    var colores = ["blue", "black", "orange", "yellow", "green" ]
+
+    function obtenerNumeroAleatorio(numeroMaximo){
+      return Math.floor(Math.random() * Math.floor(numeroMaximo));
+    }
+    function cambiarColorDeFondo(){
+        var indice = obtenerNumeroAleatorio(colores.length)
+        document.body.style.backgroundColor = colores[indice]
+
+    }
+    function quitarColorDeFondo(){
+        document.body.style.backgroundColor = "white"
+    }
+    //setTimeout(cambiarColorDeFondo(), 3000)
+    setInterval(cambiarColorDeFondo, 10)
+  </script>
+  <p id="demo"></p>
+  <button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>
+  <p onmouseover="cambiarColorDeFondo()" onmouseout="quitarColorDeFondo()">hola yo cambio el color de tu pagina si pasas el mouse encima</p>
+</body>
+</html>

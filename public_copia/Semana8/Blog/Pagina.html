@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="icon" href="frutas.jpg" sizes="16x16">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- [if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    #banner{
+      height: 50px;
+      width: 230px;
+      margin-right: 50px;
+    }
+    .active{
+      font-weight: 600;
+    }
+    .tab-content{
+      display: none;
+      padding: 10px;
+      border: 2px solid #00675b;
+      color: white;
+      background-color: #00675b;
+    }
+    .show{
+      display: block;
+    }
+    b{
+      padding-right: 40px;
+    }
+    a.nav-link{
+      padding: 20px;
+      color: white;
+      text-decoration: none;
+    }
+    a.nav-link:hover{
+      color: #4fc3f7;
+      text-decoration: none;
+    }
+    li{
+      list-style-type: none;
+    }
+    .navbar{
+      background-color: #00675b;
+      color: white;
+    }
+    img{
+      height: 400px;
+      width: 400px;
+    }
+  </style>
+  <title>Tab</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 col-xs-6 col-sm-12">
+        <nav class="navbar navbar-expand-sm bg-light">
+        <ul class="navbar-nav">
+          <li><a href="Blog.html"><img src="banner.png" alt="Logo" id="banner"></a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="Pagina.html">Más</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Slider.html">Galería</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contacto.html">Contactame</a>
+          </li>
+        </ul>
+        </nav>
+        <div class="tabs text-center">
+          <h1>Frutas</h1>
+          <nav class="tab-list">
+            <a href="#one" class="tab-active">
+              <button class="btn btn-warning">Naranja</button>
+            </a>
+            </button>
+            <a href="#two" class="tab">
+              <button class="btn btn-danger">Granada</button>
+            </a>
+            <a href="#three" class="tab">
+              <button class="btn btn-primary">Manzana</button>
+            </a>
+            <a href="#four" class="tab">
+              <button class="btn btn-success">Limón</button>
+            </a>
+            <a href="#five" class="tab">
+              <button class="btn btn-info">Pera</button>
+            </a>
+            <a href="#six" class="tab">
+              <button class="btn btn-default">Piña</button>
+            </a>
+          </nav>
+
+            <div id="one" class="tab-content show">
+              <img src="Naranja.jpg" alt="Naranja" class="img img-thumbnail">
+              <h2>Naranja</h2>
+              <p>La naranja es una fruta cítrica comestible obtenida del
+                naranjo dulce (Citrus × sinensis), del naranjo amargo
+                (Citrus × aurantium) y de naranjos de otras variedades o híbridos,
+                antiguos híbridos asiáticos originarios de India, Vietnam o el
+                sureste de China.</p>
+              <h6>19 de Marzo, 2019</h6>
+            </div>
+            <div id="two" class="tab-content">
+              <h2>Granada</h2>
+              <p>La granada es un alimento, bastante desconocido para el consumidor,
+                pero que presenta una elevada concentración de polifenoles con
+                demostrada actividad antioxidante y unas buenas características nutricionales.
+                Siendo además un fruto atractivo por su bajo aporte calórico.</p>
+              <img src="granada.jpg" alt="Granada" class="img img-thumbnail">
+              <h6>19 de Marzo, 2019</h6>
+            </div>
+            <div id="three" class="tab-content">
+              <img src="manzana.jpg" alt="Manzana" class="img img-thumbnail">
+              <h2>Manzana</h2>
+              <p>La manzana es una fruta pomácea comestible, fruta del manzano comestible,
+                otros manzanos o híbridos de aquel. En algunas zonas de España se le suele
+                llamar pero cuando tiene forma alargada, ​ aunque en muchas partes de
+                Andalucía se llama indistintamente a la manzana, sumamente deliciosa.</p>
+              <h6>19 de Marzo, 2019</h6>
+            </div>
+            <div id="four" class="tab-content">
+              <img src="limon.jpg" alt="Limón" class="img img-thumbnail">
+              <h2>Limón</h2>
+              <p>Citrus × limon, el limonero, es un pequeño árbol frutal perenne.
+                Su fruto es el limón, una fruta comestible de sabor ácido y
+                extremadamente fragante que se usa principalmente en la alimentación.
+                Destaca por ser bajo en calorías, además aporta vitaminas C, B1 y B2.</p>
+              <h6>19 de Marzo, 2019</h6>
+            </div>
+            <div id="five" class="tab-content">
+              <h2>Pera</h2>
+              <p>Se denomina pera al fruto de distintas especies del género Pyrus,
+                integrado por árboles caducifolios conocidos comúnmente como perales.
+                 La pera es una fruta jugosa, carnosa, y una de las
+                 más importantes producidas en las regiones templadas.</p>
+              <img src="pera.jpg" alt="Pera" class="img img-thumbnail">
+              <h6>19 de Marzo, 2019</h6>
+            </div>
+            <div id="six" class="tab-content">
+              <img src="Piña.jpg" alt="Piña" class="img img-thumbnail">
+              <h2>Piña</h2>
+              <p>La piña es una planta tropical con una fruta múltiple
+                comestible que consiste en bayas unidas, también
+                llamadas piñas, y la planta más significativa económicamente
+                en la familia Bromeliaceae. La piña es el fruto de una planta
+                originaria de Sudamérica, conocida como ananás.</p>
+              <h6>19 de Marzo, 2019</h6>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script>
+    $("a.tab").click(function (event) {
+      event.preventDefault();
+      $(".tab-content.show").removeClass("show")
+      $(".tab.active").removeClass("active")
+
+      $(this).addClass("active")
+      var id = $(this).attr("href")
+      $(id).addClass("show")
+    })
+  </script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

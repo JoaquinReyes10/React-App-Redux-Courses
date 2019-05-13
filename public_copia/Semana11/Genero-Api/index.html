@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- [if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    body{
+      color: white;
+      background-color: #176E8F;
+      font-size: 35px;
+    }
+    p{
+      color: #83BD55;
+      font-size: 30px;
+      font-weight: bold;
+      background-color: black;
+      border-radius: 10px;
+      margin: auto;
+      border: 3px solid #83BD55;
+      width: 50vw;
+    }
+  </style>
+  <title>Api de tu Genero</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-xs-6 col-sm-12 text-center">
+        <h1 class="alert alert-warning">Introduce un nombre y te diremos tu género</h1>
+        <form>
+        <input type="text" id="input" class="alert alert-warning">
+        <button type="button" id="btn" class="btn btn-warning">Adivinar...</button>
+        </form>
+        <div id="div" class="text-center"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script>
+      console.clear();
+      var input = $("#input");
+      var boton = $("#btn");
+      $(boton).on("click", obtener);
+
+      function obtener(event) {
+        event.preventDefault()
+        $.ajax({
+          url: "https://api.genderize.io/?name=" + input.val(),
+          method: "GET",
+          success: function(elemento) {
+            var lista = $("#div");
+            lista.empty();
+                lista.append(
+                 'Nombre: <p>' + elemento.name + '</p>'
+                +     'Género: <p>' + elemento.gender + '</p>'
+                +     'Probabilidad: <p>' + elemento.probability + '</p>'
+                +     'Cuantas personas tienen ese nombre: <p>' + elemento.count + '</p>'
+              );
+          },
+          error: function() {
+            console.log("No se ha podido obtener la información");
+          }
+        });
+      }
+  </script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+li{
+  display: inline;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+a{
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+}
+a:hover{
+  text-decoration: none;
+  color: red;
+}
+#one{
+  padding: 10px;
+}
+img{
+  border: 1px solid white;
+  width: 80%;
+}
+body{
+  background-image: url("http://www.bbmgif.com/images/starwars.gif");
+}
+h1{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+}

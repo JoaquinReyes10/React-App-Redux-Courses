@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      .preview-facebook{
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 20px;
+      }
+      .facebook-titulo{
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .imagen{
+        height: 100px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- [if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <body>
+    <div id="app" class="container-fluid">
+      Titulo: <input type="text" v-model="titulo"><br><br>
+      Descripcion: <input type="text" v-model="descripcion"><br><br>
+      Link: <input type="text" v-model="link"><br><br>
+      Imagen: <input type="text" v-model="imagen"><br><br>
+      <div class="preview-facebook col-md-12">
+        <div class="facebook-titulo col-md-3">{{ titulo }}</div>
+        <div class="facebook-descripcion col-md-3">{{ descripcion }}</div>
+        <div class="facebook-link col-md-3">{{ link }}</div>
+        <div class="imagen col-md-3"><img :src="imagen"></img></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+       var app = new Vue({
+        el: "#app",
+        data: {
+          titulo: "",
+          descripcion: "",
+          link: "",
+          imagen: ""
+        }
+      })
+    </script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>

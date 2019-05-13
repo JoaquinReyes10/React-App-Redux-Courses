@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body{
+      font-family: Roboto, sans-serif;
+    }
+    table, tr, td{
+      border: 2px solid black;
+      border-collapse: collapse;
+      padding: 10px;
+      display: none;
+    }
+    li{
+      list-style-type: none;
+      padding: 10px;
+      width: 20%;
+      border-bottom: 2px solid orange;
+      border-left: 2px solid red;
+      display: none;
+    }
+    h3{
+      list-style-type: none;
+      padding: 10px;
+      width: 20%;
+      border-top: 2px solid orange;
+      border-bottom: 2px solid orange;
+      border-left: 2px solid red;
+      border-right: 2px solid red;
+      border-radius: 15px;
+      display: none;
+    }
+    .lista_active{
+      display: block;
+    }
+    .tabla_active{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <h3>Productos:</h3>
+      <li v-for="item in listaArticulos">{{ item.articulo }}</li>
+    </ul>
+
+    <table>
+      <tr>
+        <td v-for="item in listaArticulos">{{ item.articulo }}</td>
+      </tr>
+    </table>
+    <button type="button" v-model="one" @click="lista">Mostrar en Lista</button>
+    <button type="button" v-model="two" @click="tabla">Mostrar en Tabla</button>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        listaArticulos: [
+          {
+            articulo: "Caja de Pizza",
+          }, {
+            articulo: "Coca Cola",
+          }, {
+            articulo: "Refrigerador",
+          }, {
+            articulo: "Mesa",
+          },
+        ]
+      },
+      methods: {
+        lista: function() {
+          this.one(classList.add("lista_active"))
+        },
+        tabla: function() {
+          this.two(classList.add("tabla_active"))
+      }
+    }
+    })
+  </script>
+</body>
+</html>

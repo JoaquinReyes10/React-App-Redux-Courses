@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- [if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    body{
+      background-color: #610B0B;
+      font-size: 15px;
+      color: white;
+      font-family: 'Oxygen', sans-serif;
+    }
+    b{
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .col-md-6{
+      background-color: black;
+      border: 1px solid white;
+      margin: 0;
+    }
+    input, button{
+      color: black;
+    }
+  </style>
+  <title>Api de dias festivos</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-xs-6 col-sm-12 text-center">
+        <h1 class="alert alert-info">Obten los dias festivos de tu país de acuerdo al año</h1>
+        <form>
+        Año: <input type="number" id="input" class="alert alert-info">
+        País: <input type="text" id="input2" class="alert alert-info">
+        <button type="button" id="btn" class="btn btn-primary">Obtener dias festivos de tu pais</button>
+        </form>
+        <div id="div" class="text-center col-md-12"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script>
+      console.clear();
+      var anio = $("#input");
+      var pais = $("#input2");
+      var boton = $("#btn");
+      $(boton).on("click", obtenerDias);
+
+      function obtenerDias(event) {
+        event.preventDefault()
+        $.ajax({
+          url: "https://date.nager.at/api/v2/PublicHolidays/" + anio.val() + "/" + pais.val(),
+          method: "GET",
+          success: function(elemento) {
+            var lista = $("#div");
+            lista.empty();
+              $.each(elemento, function(i, results){
+                lista.append(
+                  '<div class="col-md-6 alert alert-info">'
+                +     '<p>' + 'Fecha: '+ '<b>' + results.date + '</b>'+ '</p>'
+                +     '<p>' + 'Nombre local: ' + '<b>' + results.localName + '</b>'+ '</p>'
+                +     '<p>' + 'Nombre: ' + '<b>' + results.name + '</b>'+ '</p>'
+                +     '<p>' + 'Código de país: ' + '<b>' + results.countryCode + '</b>' + '</p>'
+                +     '<p>' + 'Fijo: ' + '<b>'+ results.fixed + '</b>' + '</p>'
+                +     '<p>'+ 'Global: ' + '<b>' + results.global + '</b>' + '</p>'
+                +     '<p>' + 'Condados: ' + '<b>' + results.counties + '</b>' + '</p>'
+                +     '<p>' + 'Tipo: ' + '<b>' + results.type + '</b>' + '</p></div>'
+              );
+              })
+        },
+          error: function() {
+            console.log("No se ha podido obtener la información");
+          }
+        });
+      }
+  </script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

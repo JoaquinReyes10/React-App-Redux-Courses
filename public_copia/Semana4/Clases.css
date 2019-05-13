@@ -1,0 +1,99 @@
+body, pre{
+  font-family: "Hammersmith One", sans-serif;
+}
+li{
+  list-style-type: none;
+  display: inline;
+  padding: 15px;
+}
+#titulo{
+  font-family: "Satisfy", cursive;
+  padding-right: 30px;
+  color: #DF0101;
+  font-size: 30px;
+  padding-left: 150px;
+}
+#buscar{
+  background-color: #E6E6E6;
+  padding: 5px;
+}
+img{
+  height: 50px;
+  width: 50px;
+  padding-right: 150px;
+  padding-top: 60px;
+}
+#li1{
+  padding-right: 0px;
+  padding-left: 230px;
+  color: #DF0101;
+}
+#li2{
+  padding-right: 0px;
+  padding-left: 50px;
+  color: #DF0101;
+}
+#li3{
+  color: #DF0101;
+  padding-right: 0px;
+  padding-left: 70px;}
+#li4{
+  color: #DF0101;
+  padding-right: 0px;
+  padding-left: 60px;
+}
+li:first-child{
+  color: #04B404;
+}
+#black{
+  margin-top: -19.5%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  height: 245px;
+  width: 330px;
+  margin-left: 55%;
+}
+.button{
+  background: #04B404;
+  color: white;
+  font-size: 20px;
+  margin-left: 1%;
+  height: 40px;
+  width: 40px;
+  margin-top: 3%;
+  border: none;
+}
+.button:first-of-type{
+  margin-top: 20%;
+}
+.btn{
+  color: #585858;
+  background: #E6E6E6;
+  height: 40px;
+  width: 180px;
+  font-size: 15px;
+  margin-right: 3%;
+}
+button:first-child{
+  background: #04B404;
+  color: white;
+}
+.part2{
+  height: 130px;
+  width: 220px;
+}
+.pre{
+  font-size: 13px;
+}
+.redon{
+  height: 100px;
+  width: 100px;
+  margin-left: 30%;
+}
+.pres{
+  margin-left: 70%;
+  font-size: 13px;
+}
+input{
+  padding: 10px;
+}

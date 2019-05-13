@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contador de Strings</title>
+  <style>
+    body{
+      font-family: Verdana;
+      background-color: #0B4C5F;
+      color: white;
+    }
+     input{
+      font-family: Verdana;
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+      border-radius: 20px;
+    }
+    textarea{
+      font-family: Verdana;
+      background-color: white;
+      color: black;
+      border: 1px solid #0B4C5F;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contador de Strings</h1>
+  <form>
+    <textarea rows="8" cols="80" id="pals"></textarea><br>
+    <input type="button" value="Click" onclick="contar()">
+    <p id="mostrar"></p>
+    <p id="lol"></p>
+    <p id="lol2"></p>
+  </form>
+
+  <script>
+    function contar(){
+    var strings = document.getElementById("pals").value;
+    var x = strings.length;
+    document.querySelector("p#mostrar").innerHTML = "Tienes " + x + " caracteres.";
+    var y = strings.split(" ");
+    var z = y.length;
+    document.querySelector("p#lol").innerHTML = "Separado por palabras: " + y;
+    document.querySelector("#lol2").innerHTML = "Tienes " + z + " palabras.";
+  }
+  </script>
+</body>
+</html>

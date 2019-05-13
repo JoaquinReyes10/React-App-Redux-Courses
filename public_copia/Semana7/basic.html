@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Basic</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css"/>
+	<style>
+	.success{
+		background: green;
+		padding: 10px;
+	}
+	.error{
+		padding: 10px;
+		background: red;
+	}
+	</style>
+</head>
+<body>
+	<h1>jQuery Basic</h1>
+
+	<div class="jquery__append">
+		<h2>.append()</h2>
+		<p id="p1">This is a paragraph.</p>
+		<ol id="ol1">
+		  <li>List item 1</li>
+		  <li>List item 2</li>
+		  <li>List item 3</li>
+		</ol>
+		<button class="jquery__append-text" id="btn1">Append text</button>
+		<button class="jquery__append-list" id="btn2">Append list item</button>
+	</div>
+
+	<div class="jquery__prepend">
+		<h2>.prepend()</h2>
+		<p id="p2">This is a paragraph.</p>
+		<ol id="ol2">
+		  <li>List item 1</li>
+		  <li>List item 2</li>
+		  <li>List item 3</li>
+		</ol>
+		<button class="jquery__prepend-text" id="btn3">Prepend text</button>
+		<button class="jquery__prepend-list" id="btn4">Prepend list item</button>
+	</div>
+
+	<div class="jquery__after-before">
+		<h2>.after() .before()</h2>
+		<p id="p3" class="p4"><span>Content</span></p>
+		<button class="jquery__after" id="btn5">Inser After</button>
+		<button class="jquery__before" id="btn6">Insert Before</button>
+	</div>
+
+	<div class="jquery__remove">
+		<h2>.remove() .empty()</h2>
+		<div class="jquery__remove-div success" id="div1">
+			<p>Some text</p>
+			<ul>
+				<li>Some list item</li>
+				<li>Some list item</li>
+				<li>Some list item</li>
+			</ul>
+		</div>
+		<button class="jquery__empty-button" id="btn7">Empty div</button>
+		<button class="jquery__remove-button" id="btn8">Remove div</button>
+	</div>
+
+	<div class="jquery__add-class">
+		<h2>.addClass()</h2>
+		<button id="btn9">Add success class</button>
+	</div>
+
+	<div class="jquery__remove-class">
+		<h2>.removeClass()</h2>
+		<button class="error" id="btn10">Remove class 'error'</button>
+	</div>
+
+	<div class="jquery__toggle-class">
+		<h2>.toggleClass()</h2>
+		<button class="btn11">Toggle class 'success'</button>
+		<p class="p">H</p>
+		<p class="p">O</p>
+		<p class="p">L</p>
+		<p class="p">A</p>
+	</div>
+
+	<div class="jquery__css">
+		<h2>.css()</h2>
+		<button id="btn12">Add CSS properties</button>
+		<p id="p5">...</p>
+	</div>
+
+	<div class="jquery__attr">
+		<h2>.attr()</h2>
+		<p><a id="a1">Go to google.com</a></p>
+		<button id="btn13">Enable link</button>
+	</div>
+
+	<div class="jquery__attr-remove">
+		<h2>.remoteAttr()</h2>
+		<p><a id="a2" href="https://google.com">Go to google.com</a></p>
+		<button id="btn14">Disable link</button>
+	</div>
+
+	<div class="jquery__slide-toggle">
+		<h2>.slideToggle()</h2>
+		<p id="p6">Some <br />text</p>
+		<button id="btn15">Slide Toggle</button>
+	</div>
+
+	<div class="jquery__fade-toggle">
+		<h2>.fadeToggle()</h2>
+		<p id="p7">Some <br />text</p>
+		<p id="p8">Some <br />text</p>
+		<p id="p9">Some <br />text</p>
+		<button id="btn16">Fade Toggle</button>
+	</div>
+
+	<div class="jquery__toggle">
+		<h2>.toggle()</h2>
+		<p id="p10">Some <br />text</p>
+		<button id="btn17">Toggle</button>
+	</div>
+
+	<div class="jquery__show">
+		<h2>.show()</h2>
+		<p style="display: none;" id="p11">Some <br />text</p>
+		<button id="btn18">Show text</button>
+	</div>
+
+	<div class="jquery__hide">
+		<h2>.hide()</h2>
+		<p id="p12">Some <br />text</p>
+		<button id="btn19">Hide text</button>
+	</div>
+
+	<div class="jquery__first">
+		<h2>.first()</h2>
+		<p class="pn">Some text</p>
+		<p class="pn">Some text</p>
+		<p class="pn">Some text</p>
+		<button id="btn20">Add class 'sucess' to first p</button>
+	</div>
+
+	<div class="jquery__last">
+		<h2>.last()</h2>
+		<p class="p13">Some text</p>
+		<p class="p13">Some text</p>
+		<p class="p13">Some text</p>
+		<button id="btn21">Add class 'sucess' to last p</button>
+	</div>
+
+
+	  <script src="./js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function(){
+		  $("#btn1").click(function(){
+		    $("#p1").append(" <b>Appended text</b>.");
+		  });
+		  $("#btn2").click(function(){
+		    $("#ol1").append("<li>Appended item</li>");
+		  });
+		});
+
+					$(document).ready(function(){
+		  $("#btn3").click(function(){
+		    $("#p2").prepend("<b>Prepended text</b>. ");
+		  });
+		  $("#btn4").click(function(){
+		    $("#ol2").prepend("<li>Prepended item</li>");
+		  });
+		});
+
+				$(document).ready(function(){
+		  $("#btn5").click(function(){
+		    $("#p3").after("<p>Marvel!</p>");
+		  });
+		});
+
+						$(document).ready(function(){
+					$("#btn6").click(function(){
+						$(".p4").before("<p>Marvel!</p>");
+					});
+				});
+
+						$(document).ready(function(){
+		  $("#btn7").click(function(){
+		    $("#div1").empty();
+		  });
+		});
+
+				$(document).ready(function(){
+		  $("#btn8").click(function(){
+		    $("#div1").remove();
+		  });
+		});
+
+				$(document).ready(function(){
+		  $("#btn9").click(function(){
+		    $("#btn9").addClass("btn btn-info");
+		  });
+		});
+
+				$(document).ready(function(){
+			$("#btn10").click(function(){
+				$("#btn10").removeClass("error");
+			});
+		});
+
+				$(document).ready(function(){
+		  $(".btn11").click(function(){
+		    $(".p").toggleClass("success");
+		  });
+		});
+
+				$(document).ready(function(){
+		  $("#btn12").click(function(){
+		    $("#p5").css("background-color", "aqua");
+		  });
+		});
+
+		  $("#btn13").click(function(){
+		    $("#a1").attr("href", "https://www.google.com.mx/");
+		  });
+
+			$("#btn14").click(function(){
+		    $("#a2").removeAttr("href", );
+		  });
+
+					$(document).ready(function(){
+		  $("#btn15").click(function(){
+		    $("#p6").slideToggle();
+		  });
+		});
+
+		  $("#btn16").click(function(){
+		    $("#p7").fadeToggle();
+		    $("#p8").fadeToggle("slow");
+		    $("#p9").fadeToggle(3000);
+		  });
+
+		  $("#btn17").click(function(){
+		    $("#p10").toggle();
+		  });
+
+		  $("#btn18").click(function(){
+		    $("#p11").show();
+		  });
+
+			$("#btn19").click(function(){
+		    $("#p12").hide();
+		  });
+
+						$("#btn20").click(function(){
+			  $(".pn").first().addClass("success");
+			});
+
+					$("#btn21").click(function(){
+		  $(".p13").last().addClass("success");
+		});
+	</script>
+
+
+	 <script src="../js/bootstrap.min.js"></script>
+	</body>
+</html>

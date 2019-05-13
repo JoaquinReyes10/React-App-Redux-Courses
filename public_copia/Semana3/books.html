@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>My Books</h1>
+  <script>
+    var books = [
+    {
+      title: "The Design of Everyday Things",
+      author: "Don Norman",
+      alreadyRead: false,
+      cover: "https://images-na.ssl-images-amazon.com/images/I/410RTQezHYL._SX326_BO1,204,203,200_.jpg",
+    }, {
+      title: "The Most Human Human",
+      author: "Brian Christian",
+      alreadyRead: true,
+      cover: "https://images-na.ssl-images-amazon.com/images/I/41m1rQjm5tL._SX322_BO1,204,203,200_.jpg",
+    }
+    ];
+
+    for (var i = 0; i < books.length; i++){
+      var libro = books[i]
+      var parrafo = document.createElement("ul")
+      var li = document.createElement("li")
+      var texto = document.createTextNode(libro.title + " por " + libro.author)
+      li.appendChild(texto)
+      document.body.appendChild(li)
+
+        var imagen = document.createElement("img")
+        imagen.src = libro.cover
+        li.appendChild(imagen)
+
+      if (libro.alreadyRead){
+        li.style.backgroundColor = "green"
+        li.style.color = "white"
+      } else {
+        li.style.backgroundColor = "red"
+        li.style.color = "white"
+      }
+    
+    }
+  </script>
+</body>
+</html>

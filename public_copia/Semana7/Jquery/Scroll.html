@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <style>
+    body{
+      background-color: #c67100;
+      color: white;
+    }
+    hr{
+      height: 100vh;
+    }
+    #hr1{
+      background-color: #01579b;
+    }
+    #hr2{
+      background-color: #388e3c;
+    }
+    #hr3{
+      background-color: #c62828;
+    }
+  </style>
+  <title>Scroll</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-xs-6 col-sm-12">
+        <a href="#one" class="label label-danger">One</a>
+        <a href="#two" class="label label-success">Two</a>
+        <hr id="hr1">
+        <div id="one">First Element</div>
+        <hr id="hr2">
+        <div id="two">Second Element</div>
+        <hr id="hr3">
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script>
+  $("a[href^='#']").click(function(event){
+    event.preventDefault()
+
+    var href = $(this).attr('href')
+    var position = $(href).offset()
+
+    $('body , html').animate({
+      scrollTop:position.top
+    })
+  })
+  </script>
+  <script src="./js/bootstrap.min.js"></script>
+</body>
+</html>

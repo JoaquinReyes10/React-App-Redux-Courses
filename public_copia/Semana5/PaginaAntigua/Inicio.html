@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+  <title>BR</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/BR-Logo.svg/2000px-BR-Logo.svg.png" sizes="16x16">
+  <style>
+    body{
+      font-family: "Major Mono Display", monospace;
+      background-color: black;
+    }
+    h1{
+      font-size: 50px;
+      text-align: center;
+      color: aqua;
+      margin-bottom: 10%;
+    }
+    h1:nth-of-type(2){
+      color: red;
+      font-size: 50px;
+      text-align: center;
+    }
+    h1:last-child{
+      color: Lawngreen;
+      font-size: 50px;
+      margin-top: 13%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1><u>bienvenido a br</u></h1>
+    <h1><u>biografías random para tus tareas</u></h1>
+    <a href="" id="cont" onclick="LinkDif()"><h1><u>click aqui para ir a la página de inicio</u></h1></a>
+  </div>
+
+  <script>
+    var link = ["StanLee.html", "BillGates.html", "SteveJobs.html", "RobertoGomezB.html",];
+
+    function LinkDif(){
+      var random = Math.floor(Math.random() * link.length);
+      document.querySelector("#cont").href = link[random];
+    }
+  </script>
+</body>
+</html>

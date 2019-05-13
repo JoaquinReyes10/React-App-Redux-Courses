@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  body{
+    background-color: black;
+    color: white;
+  }
+  img{
+    border: 1px solid white;
+  }
+  div{
+    vertical-align: baseline;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+  </style>
+</head>
+<body>
+  <img src="https://img-cdn.hipertextual.com/files/2018/12/avengers-4-endgame.jpg?strip=all&lossy=1&quality=60&ssl=1" alt="End Game" height="600px" width="1275px">
+  <div>
+  </div>
+  <script>
+    var actors = [
+    {
+      nombre: "Robert Downey Jr",
+      cumple: "04 de Abril de 1965",
+      hobbies: ["Genio", " Multimillonario", " Play Boy", " Filántropo", " Tener Hambre"],
+      fotoPerfil: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRLPhokRVvZkS8U1rSGq0jFip7BoA8V0cSd77YdEhbpE-RzJ50",
+    }, {
+      nombre: "Chris Evans",
+      cumple: "13 de Junio de 1985",
+      hobbies: ["Soldado", " Entender Referencias"],
+      fotoPerfil: "https://images.financialexpress.com/2015/04/Chris-evans-s-reuters.jpg",
+    },
+      {
+          nombre: "Scarlett Johansson",
+          cumple: "22 de Noviembre de 1984",
+          hobbies: ["Es una espia", " Cambiar de Look"],
+          fotoPerfil: "https://storage.lacapitalmdp.com/2018/12/scarlett-2-300x200.jpg",
+      },
+        {
+          nombre: "Josh Brolin",
+          cumple: "12 de Febrero de 1968",
+          hobbies: ["Chasquear los dedos", " Equilibrar el universo"],
+          fotoPerfil: "http://d1lofqbqbj927c.cloudfront.net/bestfm/2017/06/16082731/Josh-Brolin-300x200.jpg",
+        },
+          {
+            nombre: "Brie Larson",
+            cumple: "01 de Octubre de 1989",
+            hobbies: ["Matar Skrulls", " Volar", " Ser poderosa"],
+            fotoPerfil: "http://www.enelcine.com.ar/wp-content/themes/enelcine/thumb/phpThumb.php?src=/wp-content/uploads/poster-15419.jpg&h=200&w=300&zc=1&q=80",
+            }
+    ];
+
+    for (var i = 0; i < actors.length; i++){
+      var actor = actors[i]
+
+      var parrafo = document.createElement("h2")
+      var h2 = document.createElement("h2")
+      var img = document.createElement("img")
+      var texto = document.createTextNode(actor.nombre)
+      h2.appendChild(texto)
+      document.body.appendChild(h2)
+
+      var sss = document.createElement("p")
+      var p = document.createElement("p")
+      var texto2 = document.createTextNode(actor.cumple)
+      p.appendChild(texto2)
+      document.body.appendChild(p)
+
+      var onb = document.createElement("li")
+      var li = document.createElement("li")
+      var texto3 = document.createTextNode(actor.hobbies)
+      li.appendChild(texto3)
+      document.body.appendChild(li)
+
+      var imagen = document.createElement("img")
+      var texto4 = document.createTextNode(actor.fotoPerfil)
+      imagen.src = actor.fotoPerfil
+      img.appendChild(texto4)
+      document.body.appendChild(img)
+      imagen.style.width = "300px"
+      imagen.style.height = "200px"
+
+      document.getElementsByTagName("div")[0].appendChild(imagen)
+      document.getElementsByTagName("div")[0].appendChild(h2)
+      document.getElementsByTagName("div")[0].appendChild(p)
+      document.getElementsByTagName("div")[0].appendChild(li)
+
+
+    }
+  </script>
+</body>
+</html>

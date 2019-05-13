@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p>No tengo pruebas pero tampoco dudas</p>
+  <script>
+    var parrafo = document.querySelector("p")
+
+    parrafo.addEventListener("click", cambiarDeColorYellow)
+    function cambiarDeColorYellow(){
+      parrafo.style.color = "yellow"
+    }
+
+    parrafo.addEventListener("dblclick", cambiarDeColorBlue)
+    function cambiarDeColorBlue(){
+      parrafo.style.color = "blue"
+    }
+
+    parrafo.addEventListener("mouseout", cambiarDeColorGreen)
+    function cambiarDeColorGreen(){
+      parrafo.style.color = "green"
+    }
+
+    parrafo.addEventListener("mouseover", cambiarDeColorRed)
+    function cambiarDeColorRed(){
+      parrafo.style.color = "red"
+    }
+  </script>
+</body>
+</html>

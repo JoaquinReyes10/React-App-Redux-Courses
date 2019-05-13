@@ -1,0 +1,55 @@
+#caja{
+  background-color: #1F80C9;
+  border: none;
+  height: 50px;
+  width: 450px;
+  color: white;
+  font-size: 20px;
+  padding-left: 2%;
+}
+body{
+  font-family:"Quattrocento Sans", sans-serif;
+}
+.numeros{
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+#suma{
+  background-color: orange;
+  color: white;
+  font-size: 20px;
+}
+#resta{
+  background-color: purple;
+    color: white;
+    font-size: 20px;
+}
+#multi{
+  background-color: grey;
+    color: white;
+    font-size: 20px;
+}
+#entre{
+  background-color: green;
+    color: white;
+    font-size: 20px;
+}
+#resul{
+  background-color: #01A9DB;
+    color: white;
+    font-size: 20px;
+}
+#c{
+  background-color: red;
+    color: white;
+    font-size: 20px;
+}
+form{
+  margin-left: 35%;
+}
+input{
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+}

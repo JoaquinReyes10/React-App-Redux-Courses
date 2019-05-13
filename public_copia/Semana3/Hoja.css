@@ -1,0 +1,27 @@
+p:first-child{
+  background-color: yellow;
+}
+p:last-child{
+  font-size: 25px;
+}
+p:only-child{
+  background-color: tomato;
+  text-align: right;
+  padding: 10px;
+}
+i:nth-child(3n+0){
+  font-size: 25px;
+  color: green;
+  border: 2px solid blue;
+}
+p:nth-of-type(2n+3){
+  background-color: #585858;
+  color: aqua;
+}
+p:nth-last-child(2){
+  text-align: center;
+  color: white;
+}
+p:first-of-type{
+  font-family: Verdana;
+}
